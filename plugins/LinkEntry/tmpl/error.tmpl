@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<mt:If name="count" gt="1">
+  <$mt:SetVar name="title" value="該当する記事が1つ以上あります"$>
+<mt:Else>
+  <$mt:SetVar name="title" value="該当するページが見つかりません"$>
+  <mt:SetVarBlock name="body">該当するページが見つかりませんでした。記事コードをお確かめください。<a href="/linkentry.html">再入力</a></mt:SetVarBlock>
+</mt:If>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title><$mt:Var name="title"$></title>
+</head>
+<body>
+  <h1><$mt:Var name="title"$></h1>
+  <mt:If name="body"><p><$mt:Var name="body"$></p></mt:If>
+</body>
+</html>

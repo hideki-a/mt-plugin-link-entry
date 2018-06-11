@@ -1,0 +1,16 @@
+id: LinkEntry
+key: linkentry
+name: LinkEntry
+version: 0.1
+config_settings:
+    LinkEntryScript:
+        default: mt-linkentry.cgi
+        updatable: 1
+    LinkEntryCGIPath:
+        default: /mt
+applications:
+    linkentry:
+        script: sub { MT->config->LinkEntryScript }
+        handler: MT::App::LinkEntry
+        methods:
+            dispentrybycode: $linkentry::MT::App::LinkEntry::_DispEntryByCode
