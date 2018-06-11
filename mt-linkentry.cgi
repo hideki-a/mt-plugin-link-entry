@@ -8,6 +8,5 @@
 
 use strict;
 use lib $ENV{MT_HOME} ? "$ENV{MT_HOME}/lib" : 'lib';
-use lib $ENV{MT_HOME} ? "$ENV{MT_HOME}/plugins/MyDebugger/lib" : 'plugins/MyDebugger/lib';
 use lib $ENV{MT_HOME} ? "$ENV{MT_HOME}/plugins/LinkEntry/lib" : 'plugins/LinkEntry/lib';
 use MT::Bootstrap App => 'MT::App::LinkEntry';
