@@ -23,7 +23,7 @@ sub _DispEntryByCode {
     my $class = MT->model('entry');
     my $code = $app->param( 'code' );
     my $blog_id = $app->param( 'blog_id' );
-    my $col = 'entry_link_code';
+    my $col = MT->config( 'LinkEntryCodeField' );
     my $type = MT::Meta->metadata_by_name($class, 'field.' . $col);
 
     my @entries = MT::Entry->load(

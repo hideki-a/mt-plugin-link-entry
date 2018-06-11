@@ -8,6 +8,9 @@ config_settings:
         updatable: 1
     LinkEntryCGIPath:
         default: /mt
+    LinkEntryCodeField:
+        default: entry_link_code
+        updatable: 1
 applications:
     linkentry:
         script: sub { MT->config->LinkEntryScript }
